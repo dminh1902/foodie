@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    overflow-x: hidden;
+  }
+
+  body.cart-open {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold font-rubik transition-all duration-300 rounded-sm;
+  }
+
+  .btn-dark {
+    @apply bg-gray-900 hover:bg-orange-500 text-white font-semibold font-rubik transition-all duration-300 rounded-sm;
+  }
+
+  .section-subtitle {
+    @apply text-red-500 font-rubik font-medium text-center;
+  }
+
+  .section-title {
+    @apply font-rubik font-semibold text-gray-900 leading-tight tracking-tight;
+  }
+}
+
+@layer utilities {
+  .font-rubik {
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f97316;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ea6c00;
+}
+
+::selection {
+  background-color: #f97316;
+  color: #fff;
+}
